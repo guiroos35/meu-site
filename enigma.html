@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wie spat ist es?</title>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: 'Roboto Mono', monospace;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: green;
+      text-align: center;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    p {
+      color: green;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 20px;
+    }
+
+    label {
+      color: green;
+    }
+
+    button {
+      color: green;
+      background-color: black;
+      border: 2px solid green;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: green;
+      color: black;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="content-container">
+    <h1 class="title">Wie spat ist es?</h1>
+
+    <!-- Uhr -->
+    <div style="position: relative; width: 100%; height: 0; padding-top: 83.8298%; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px;">
+      <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;" src="https://www.canva.com/design/DAGQec83t1s/BXhBzS9q6O0iMC-08m-cdQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+      </iframe>
+    </div>
+
+    <form id="response-form">
+      <label for="fname">Resposta:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <button type="button" onclick="checkAccess()">Enviar</button>
+    </form>
+
+    <p>Somente números</p>
+  </div>
+
+  <script>
+    function checkAccess() {
+      const password = prompt('Digite a senha:');
+      if (password === '1032') {
+        // Redireciona para o link se a senha estiver correta
+        window.location.href = 'https://drive.google.com/file/d/1156e4qO7QDELa42Bbbom2tHzDqrDh1S-/view';
+      } else {
+        // Exibe alerta se a senha estiver incorreta
+        alert('Senha incorreta! Tente novamente.');
+      }
+    }
+  </script>
+</body>
+
+</html>
